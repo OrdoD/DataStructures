@@ -9,7 +9,6 @@ public:
 	ParallelException(std::string errorMessage)
 		: errorMessage(errorMessage) {}
 
-	~ParallelException() {};
 
 	std::string returnMessage() {
 
@@ -28,12 +27,8 @@ private:
 
 public: 
 	// Line constructor to create a line w/ two points
-	Line(double a, double b) {
-
-		this->a = a; 
-		this->b = b; 
-
-	}
+	Line(double a, double b) 
+		: a(a), b(b) {}
 
 
 	double intersect(Line& objLine) {
@@ -61,7 +56,7 @@ int main() {
 	
 	try {
 
-		std::cout << "The x coordinate of the intersection is: " << (fLine.intersect(sLine));
+		std::cout << "The x coordinate of the intersection is: " << (fLine.intersect(sLine)) << "\n";
 
 	}
 	catch (ParallelException& exception) {
