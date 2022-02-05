@@ -163,10 +163,10 @@ void concatenateList(Node<T>* &head1, Node<T>* &head2) {
     Node<T>* ptr = head1;
 
     // Check if ptr -> head1 == NULL
-    if (ptr == NULL) {
+    if (ptr->next == NULL) {
 
         head1 = head2;
-
+        return;
     }
 
     while (ptr->next != NULL) {
@@ -176,7 +176,7 @@ void concatenateList(Node<T>* &head1, Node<T>* &head2) {
     }
 
     ptr->next = head2;
-    head1 = head2;
+    return;
     
 }
 
@@ -184,6 +184,7 @@ template <class T>
 LinkedList<T> LinkedList<T>::operator+(LinkedList<T> &head) {
     
 }
+
 
 
 int main(int argc, char const* argv[])
@@ -196,38 +197,18 @@ int main(int argc, char const* argv[])
     list->addToTail(222);
     list->print();
     std::cout << "Add to tail, List Length: " << list->length << std::endl;
-    for (int i = 0; i < 6; ++i)
-    {
-        //list->addToHead(rand() % 100);
-        list->addToHead((i + 1) * 10);
-    }
-    list->print();
-    std::cout << "Add multiple nodes to head, List Length: " << list->length << std::endl;
-
-    list->addToTail(333);
-    list->print();
-    std::cout << "Add to tail again, List Length: " << list->length << std::endl;
-
-    list->addAtPosition(3, 007);
-    list->print();
-    std::cout << "Add to position 3, List Length: " << list->length << std::endl;
-
-    list->deleteFirst();
-    list->deleteLast();
-    list->print();
-    std::cout << "delete first delete last, List Length: " << list->length << std::endl;
-    list->deleteAtPosition(6);
-    list->print();
-    std::cout << "delete node at position 6, List Length: " << list->length << std::endl;
+    
 
     LinkedList<int>* list2 = new LinkedList<int>(); 
 
     list2->addToHead(340); 
     list2->addToHead(350); 
     list2->addToHead(500); 
-    list2->addToTail(400);
+    list2->addToHead(400);
 
+    
     concatenateList(list->head, list2->head);
+
 
     list->print();
 
