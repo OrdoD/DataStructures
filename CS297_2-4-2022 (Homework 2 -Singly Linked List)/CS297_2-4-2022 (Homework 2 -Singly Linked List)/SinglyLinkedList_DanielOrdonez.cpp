@@ -220,6 +220,14 @@ int main(int argc, char const* argv[])
     list->deleteAtPosition(6);
     list->print();
     std::cout << "delete node at position 6, List Length: " << list->length << std::endl;
+
+    LinkedList<int>* list2 = new LinkedList<int>(); 
+
+    list2->addToHead(340); 
+    list2->addToHead(350); 
+    list2->addToHead(500); 
+    list2->addToTail(400);
+
     //delete list;
     return 0;
 }
