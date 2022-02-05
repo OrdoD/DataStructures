@@ -98,14 +98,6 @@ void LinkedList::printInReverse() {
     }
 
 
-    while (head != pos) {
-        std::cout << pos->data << " ";
-        std::cout << head->data << " ";
-        
-    }
-
-
-
     
 }
 
@@ -116,7 +108,6 @@ int main(int argc, char const* argv[])
     {
         list->add(rand() % 100);
     }
-    list->printInReverse();
     list->print(); 
     std::cout << "List Length: " << list->length << std::endl;
     delete list;
