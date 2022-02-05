@@ -29,13 +29,13 @@ public:
     void addToTail(T data);
     void addAtPosition(T position, T data);
     void print();
-    void concatenateList(LinkedList<T>& head1, LinkedList<T>& head2);
-    void concatenateList();
     void deleteFirst();
     void deleteLast();
     void deleteAtPosition(T i);
 
-    void operator+(LinkedList<T>& head);
+    void concatenateList(Node<T>*& head1, Node<T>*& head2);
+
+    LinkedList<T> operator+(LinkedList<T>& head);
 
 };
 
@@ -158,7 +158,7 @@ void LinkedList<T>::print() {
 
 
 template <class T> 
-void LinkedList<T>::concatenateList(LinkedList<T> &head1, LinkedList<T> &head2) {
+void concatenateList(Node<T>* &head1, Node<T>* &head2) {
 
     Node<T>* ptr = head1;
 
@@ -166,7 +166,6 @@ void LinkedList<T>::concatenateList(LinkedList<T> &head1, LinkedList<T> &head2) 
     if (ptr == NULL) {
 
         head1 = head2;
-        return head1;
 
     }
 
@@ -177,12 +176,12 @@ void LinkedList<T>::concatenateList(LinkedList<T> &head1, LinkedList<T> &head2) 
     }
 
     ptr->next = head2;
-    return head1;
+    head1 = head2;
     
 }
 
 template <class T>
-void LinkedList<T>::operator+( LinkedList<T> &head) {
+LinkedList<T> LinkedList<T>::operator+(LinkedList<T> &head) {
     
 }
 
@@ -227,6 +226,10 @@ int main(int argc, char const* argv[])
     list2->addToHead(350); 
     list2->addToHead(500); 
     list2->addToTail(400);
+
+    concatenateList(list->head, list2->head);
+
+    list->print();
 
     //delete list;
     return 0;
