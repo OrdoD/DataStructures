@@ -35,7 +35,7 @@ public:
 
     void concatenateList(Node<T>*& head1, Node<T>*& head2);
 
-    LinkedList<T> operator+(LinkedList<T>& head);
+    LinkedList<T> operator+(LinkedList<T>& other);
 
 };
 
@@ -48,7 +48,7 @@ LinkedList<T> ::LinkedList() {
 
 template <class T>
 LinkedList<T>::~LinkedList() {
-    std::cout << "LIST DELETED";
+   
 }
 
 template <class T>
@@ -157,8 +157,8 @@ void LinkedList<T>::print() {
 }
 
 
-template <class T> 
-void concatenateList(Node<T>* &head1, Node<T>* &head2) {
+template <class T>
+void concatenateList(Node<T>*& head1, Node<T>*& head2) {
 
     Node<T>* ptr = head1;
 
@@ -177,41 +177,83 @@ void concatenateList(Node<T>* &head1, Node<T>* &head2) {
 
     ptr->next = head2;
     return;
-    
+
 }
 
 template <class T>
-LinkedList<T> LinkedList<T>::operator+(LinkedList<T> &head) {
-    
+LinkedList<T> LinkedList<T>::operator+(LinkedList<T>& other) {
+
+    LinkedList<T> temp;
+
+    for (Node<T>* cur = head; cur != NULL; cur = cur->next) {
+        temp.addToTail(cur->data);
+    }
+
+    for (Node<T>* cur = other.head; cur != NULL; cur = cur->next) {
+        temp.addToTail(cur->data);
+    }
+
+    return temp;
 }
 
 
 
 int main(int argc, char const* argv[])
 {
-    LinkedList<int>* list = new LinkedList<int>();
-    list->addToHead(111);
-    list->print();
-    std::cout << "Add to head, List Length: " << list->length << std::endl;
-
-    list->addToTail(222);
-    list->print();
-    std::cout << "Add to tail, List Length: " << list->length << std::endl;
-    
-
-    LinkedList<int>* list2 = new LinkedList<int>(); 
-
-    list2->addToHead(340); 
-    list2->addToHead(350); 
-    list2->addToHead(500); 
-    list2->addToHead(400);
-
-    
-    concatenateList(list->head, list2->head);
+    LinkedList<int> list;
+    list.addToHead(111);
+    list.print();
+    std::cout << "Add to head, List Length: " << list.length << "\n\n";
 
 
-    list->print();
+    list.addToTail(222);
+    list.print();
+    std::cout << "Add to tail, List Length: " << list.length << "\n\n";
+
+
+    LinkedList<int> list2;
+    cout << "LinkedList list2 Printed" << "\n";
+    list2.addToHead(340);
+    list2.addToHead(350);
+    list2.addToHead(500);
+    list2.addToHead(400);
+
+    list2.print();
+
+    LinkedList<int> list3 = list + list2; 
+
+    cout << "New combined LinkedList list3 Printed Using Overloaded + operator" << "\n";
+
+    list3.print();
+
+    cout << "concatenateList()" << "\n\n\n";
+
+    cout << "New list4 and list5 combined together with concatenateList()" << " \n";
+    LinkedList<int>* list4 = new LinkedList<int>();
+    list4->addToHead(111);
+    list4->print();
+    std::cout << "Add to head, List Length: " << list4->length << std::endl;
+
+    list4->addToTail(222);
+    list4->print();
+    std::cout << "Add to tail, List Length: " << list4->length << std::endl;
+
+
+    LinkedList<int>* list5 = new LinkedList<int>();
+
+    list5->addToHead(340);
+    list5->addToHead(350);
+    list5->addToHead(500);
+    list5->addToHead(400);
+
+
+    concatenateList(list4->head, list5->head);
+
+
+    list4->print();
 
     //delete list;
     return 0;
 }
+
+
