@@ -8,8 +8,6 @@
 
 
 
-
-
 int main() {
     
     std::string text = "As she said these words her foot slipped, and in another "
@@ -23,8 +21,8 @@ int main() {
 
 
 
-   std::cout << "The number of instances of she/She in the text is : " << herWordInstance(tokens, "she") << "\n";
-   std::cout << "The number of instances of her/Her in the text is : " << herWordInstance(tokens, "Her") << "\n";
+   std::cout << "The number of instances of she/She in the text is : " << wordInstance(tokens, "she") << "\n";
+   std::cout << "The number of instances of her/Her in the text is : " << wordInstance(tokens, "Her") << "\n";
 
     std::cout << "\n\n";
 
@@ -34,8 +32,8 @@ int main() {
 
     std::vector<std::string> tokens2 = split(text2, " ");
 
-    std::cout << "The number of instances of cat/Cat in the text is : " << herWordInstance(tokens2, "cat") << "\n";
-    std::cout << "The number of instances of the/The in the text is : " << herWordInstance(tokens2, "the") << "\n";
+    std::cout << "The number of instances of cat/Cat in the text is : " << wordInstance(tokens2, "cat") << "\n";
+    std::cout << "The number of instances of the/The in the text is : " << wordInstance(tokens2, "the") << "\n";
     
 
     std::cout << "\n\n\n";
@@ -58,7 +56,7 @@ int main() {
     std::cout << "\n";
 
     std::cout << "First Queue Has: " << tokenQueue.size() << " elements before QueueMultiRemove" << "\n";
-    std::cout << "Removing 9 element from queue" << "\n";
+    std::cout << "Removing 10 element from queue" << "\n";
     QueueMultiRemove(tokenQueue, 10);
     std::cout << "First Queue Has: " << tokenQueue.size() << " elements after QueueMultiRemove" << "\n";
 

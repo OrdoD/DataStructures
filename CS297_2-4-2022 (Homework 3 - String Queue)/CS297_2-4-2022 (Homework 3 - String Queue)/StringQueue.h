@@ -5,9 +5,9 @@
 #define STRINGQUEUE
 
 
-unsigned int herWordInstance(std::vector<std::string>, std::string target);
+unsigned int wordInstance(std::vector<std::string>, std::string target);
 
-void QueueMultiRemove(std::queue<std::string>&, unsigned int );
+void QueueMultiRemove(std::queue<std::string>&, unsigned int);
 
 
 #endif 

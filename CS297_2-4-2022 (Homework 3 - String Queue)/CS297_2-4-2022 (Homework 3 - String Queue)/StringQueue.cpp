@@ -6,7 +6,7 @@
 
 
 
-unsigned int herWordInstance(std::vector<std::string> tokenVector, std::string target) {
+unsigned int wordInstance(std::vector<std::string> tokenVector, std::string target) {
 
 	std::queue<std::string> tokenQueue;
 
@@ -57,9 +57,17 @@ void QueueMultiRemove(std::queue<std::string> &tokenQueue, unsigned int k) {
 	}
 
 	for (auto i = 0; i < k; i++) {
+
 		if (!tokenQueue.empty()) {
+
 			tokenQueue.pop();
+
 		}
+		else {
+			break; 
+		}
+	
+
 	}
 	
 	(tokenQueue.empty()) ? std::cout << "The queue is empty" << "\n" : std::cout << "The queue still has " << tokenQueue.size() << " elements." << "\n";
