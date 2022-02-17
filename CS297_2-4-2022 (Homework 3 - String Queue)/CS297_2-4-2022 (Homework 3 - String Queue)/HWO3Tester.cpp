@@ -38,7 +38,7 @@ int main() {
     std::cout << "The number of instances of the/The in the text is : " << herWordInstance(tokens2, "the") << "\n";
     
 
-    std::cout << "\n\n";
+    std::cout << "\n\n\n";
 
     std::queue<std::string> tokenQueue;
 
@@ -53,10 +53,16 @@ int main() {
     std::cout << "First Queue Has: " << tokenQueue.size() << " elements before QueueMultiRemove" << "\n";
     std::cout << "Removing 37 element from queue" << "\n";
     QueueMultiRemove(tokenQueue, 37);
-
     std::cout << "First Queue Has: " << tokenQueue.size() << " elements after QueueMultiRemove" << "\n";
 
-    std::cout << "\n\n";
+    std::cout << "\n";
+
+    std::cout << "First Queue Has: " << tokenQueue.size() << " elements before QueueMultiRemove" << "\n";
+    std::cout << "Removing 9 element from queue" << "\n";
+    QueueMultiRemove(tokenQueue, 10);
+    std::cout << "First Queue Has: " << tokenQueue.size() << " elements after QueueMultiRemove" << "\n";
+
+    std::cout << "\n\n\n";
 
     std::cout << "Second Queue Has: " << emptyQueue.size() << " elements before QueueMultiRemove" << "\n";
     std::cout << "Removing 20 element from queue" << "\n";
