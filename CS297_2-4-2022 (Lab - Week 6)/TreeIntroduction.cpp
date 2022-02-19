@@ -54,6 +54,17 @@ Node* expressionTree(string str) {
     return root;
 }
 
+
+Node* btToBST(struct Node* node) {
+    
+    if ((node->data > node->left->data) && (node->data < node->right->data)) {
+        return node; 
+    }
+
+    
+
+
+}
 void printInorder(struct Node* node)
 {
     if (node == NULL)
@@ -76,6 +87,14 @@ int main()
     expressionTree("ab+cde+**");
     
     printInorder(expressionTree("ab+cde+**"));
+
+    struct Node* root = new Node(8);
+    root->left = new Node(4);
+    root->right = new Node(10);
+    root->left->left = new Node(2);
+    root->left->right = new Node(7);
+
+    btToBST(root);
 
     return 0;
 }
