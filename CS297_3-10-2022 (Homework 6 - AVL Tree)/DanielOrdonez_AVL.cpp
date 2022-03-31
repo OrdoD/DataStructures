@@ -267,9 +267,12 @@ int main() {
     Node<std::string>* root = NULL;
 
     std::vector<std::string> presidents = { "Harry S.Truman", "Dwight D.Eisenhower",
-            "John F.Kennedy", "Lyndon B.Johnson", "Richard M.Nixon",
-            "Gerald R.Ford", "Jimmy Carter", "Ronald Reagan", "George Bush",
-            "Bill Clinton", "George W.Bush", "Barak Obama", "Donald J.Trump", "Joseph R.Biden" };
+                                            "John F.Kennedy", "Lyndon B.Johnson", 
+                                            "Richard M.Nixon", "Gerald R.Ford", 
+                                            "Jimmy Carter", "Ronald Reagan", 
+                                            "George Bush", "Bill Clinton", 
+                                            "George W.Bush", "Barak Obama", 
+                                            "Donald J.Trump", "Joseph R.Biden" };
 
 
     for (auto i = 0; i < presidents.size(); i++) {
