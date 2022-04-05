@@ -64,7 +64,6 @@ void Stack<T>::push(T data) {
 
 }
 
-
 template<typename T>
 void Stack<T>::pop() {
 	
@@ -77,6 +76,7 @@ template<typename T>
 T Stack<T>::peek() {
 	
 	if (firstQ.empty()) { 
+
 		std::cout << "Stack is empty" << "\n"; 
 		return 0; 
 	}

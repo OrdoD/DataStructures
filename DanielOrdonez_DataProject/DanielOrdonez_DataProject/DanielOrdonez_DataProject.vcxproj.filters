@@ -21,9 +21,18 @@
     <ClCompile Include="driver.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="VectorT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BinarySearchTreeT.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="001_Data_Set_Zipcode_5_Digit.txt">
+    <Text Include="001_Data_Set_Zipcode_5_Digit_100kitems.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="002_Data_Set_Buisiness_Names_50kitems.txt">
       <Filter>Resource Files</Filter>
     </Text>
   </ItemGroup>
