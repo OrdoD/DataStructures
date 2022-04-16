@@ -23,7 +23,7 @@ public:
 	~Stack();
 	T peek() ;
 	void push(T data);
-	void pop();
+	void qpop();
 	std::queue<T> firstQ, secondQ;
 	size_t size;
 
@@ -37,14 +37,16 @@ Stack<T>::Stack() {
 
 template<typename T>
 Stack<T>::~Stack() {
-	std::queue<T> emptyQ, emptyQ1;
+	std::queue<T> emptyQ;
 
-	if (!firstQ.empty()) {
-		swap(firstQ, emptyQ);
-		swap(secondQ, emptyQ1);
+	if (!(firstQ.empty())) {
+
+		firstQ = emptyQ;
+		secondQ = emptyQ;
 	}
-
 }
+
+
 
 template<typename T>
 void Stack<T>::push(T data) {
@@ -60,12 +62,12 @@ void Stack<T>::push(T data) {
 
 	std::queue<T> emptyQ;
 
-	std::swap(secondQ, emptyQ);
+	secondQ = emptyQ;
 
 }
 
 template<typename T>
-void Stack<T>::pop() {
+void Stack<T>::qpop() {
 	
 	if (firstQ.empty()) { std::cout << "Stack is empty" << "\n"; }
 	firstQ.pop();

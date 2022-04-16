@@ -1,0 +1,2 @@
+Binary Search Tree Insertion 
+Time taken by function: 11930516 microseconds

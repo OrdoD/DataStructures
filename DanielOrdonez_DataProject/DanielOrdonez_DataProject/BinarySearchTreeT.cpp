@@ -49,11 +49,13 @@ BinarySearchTree<T>::~BinarySearchTree() {
 
 
 template <typename T>
-BinarySearchTree<T>* BinarySearchTree<T>::append(BinarySearchTree* root, T data) {
+BinarySearchTree<T>* 
+BinarySearchTree<T>::append(BinarySearchTree* root, T data) {
 
 	if (root == NULL) {return new BinarySearchTree<T>(data);}
 
-	(data < root->data) ? root->left = append(root->left, data) : root->right = append(root->right, data); 
+	(data < root->data) ? root->left = append(root->left, data) 
+		: root->right = append(root->right, data); 
 
 	return root;
 	

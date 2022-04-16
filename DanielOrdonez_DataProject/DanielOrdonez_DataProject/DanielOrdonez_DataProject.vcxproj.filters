@@ -35,5 +35,11 @@
     <Text Include="002_Data_Set_Buisiness_Names_50kitems.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="output_data.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="003_Data_Set_Zipcode_5_Digit_10kitems.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
