@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-// Vector functions (Array Implementation): insert(), resizeArr(), ctor, dtor 
+// Vector functions (Array Implementation): insert(), resizeArr(), ctor 
 // Example:
 //    Vector<int> myVec; 
 //    
@@ -19,11 +19,13 @@ class VectorT {
 
 public: 
 	T* arr;
-	VectorT(int); 
-	~VectorT(); 
+	VectorT(); 
 	void insert(T data); 
 	int currIndex;
 	size_t size;
+	void remove();
+	int getSize();
+	void printArr();
 
 private: 
 	void resizeArr();
@@ -31,20 +33,17 @@ private:
 };
 
 
-template <typename T>
-VectorT<T>::VectorT(int s) {
 
-	size = s; 
+template <typename T>
+VectorT<T>::VectorT() {
+
+	size = 10; 
 	currIndex = 0; 
 	arr = new T[size];
 
 }
 
-template <typename T>
-VectorT<T>::~VectorT() {
 
-	delete [] arr; 
-}
 
 template <typename T>
 void VectorT<T>::resizeArr() {
@@ -52,7 +51,7 @@ void VectorT<T>::resizeArr() {
 	if (currIndex >= size) {
 		T* newArr = new T[2 * size];
 
-		for (auto i = 0; i < size; i++) {
+		for (auto i = 0; i <= currIndex - 1; i++) {
 			newArr[i] = arr[i];
 		}
 
@@ -66,6 +65,12 @@ void VectorT<T>::resizeArr() {
 
 }
 
+template <typename T>
+int VectorT<T>::getSize() {
+
+	return size;
+
+}
 
 template <typename T>
 void VectorT<T>::insert(T data) {
@@ -81,4 +86,39 @@ void VectorT<T>::insert(T data) {
 	currIndex++;
 	return;
 
+}
+
+template <typename T>
+void VectorT<T>::printArr() {
+
+	for (auto i = 0; i < currIndex; i++) {
+		std::cout << "arr[" << arr[i] << "]" << "\n";
+		std::cout << size << "\n";
+	}
+}
+
+template <typename T> 
+void VectorT<T>::remove() {
+		if(currIndex == 0) { 
+			std::cout << "Vector is empty" << "\n";
+			return;
+		}
+		if (currIndex <= (size / 2) && (size != 10)) {
+
+			T* newArr = new T[(size / 2)];
+
+			for (auto i = 0; i <= currIndex - 1; i++) {
+				newArr[i] = arr[i];
+			}
+
+			size /= 2;
+			delete[] arr;
+			arr = newArr;
+			currIndex--; 
+			return;
+		}
+
+
+	currIndex--;
+	arr[currIndex] = 0; 
 }

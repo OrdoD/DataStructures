@@ -1,8 +1,31 @@
-Binary Search Tree Insertion 
+
+
+
+Vector using Array Implementation Insertion Insertion 
+Time taken by function: 119 milliseconds 
+
+
+Vector using Array Implementation Insertion Insertion 
 Time taken by function: 24 milliseconds 
 
 
 Vector using Array Implementation Insertion Insertion 
-Time taken by function: 19 milliseconds 
-Stack Insertion 
-Time taken by function: 95073 milliseconds 
+Time taken by function: 24 milliseconds 
+
+
+Vector using Array Implementation Insertion Insertion 
+Time taken by function: 24 milliseconds 
+
+
+Vector using Array Implementation Insertion Insertion 
+Time taken by function: 24 milliseconds 
+
+
+Vector using Array Implementation Insertion Insertion 
+Time taken by function: 24 milliseconds 
+
+
+Vector using Array Implementation Insertion Insertion 
+Time taken by function: 24 milliseconds 
+
+

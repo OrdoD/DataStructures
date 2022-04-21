@@ -12,52 +12,52 @@ using namespace std::chrono;
 int main() {
 
 
-	// Binary Search Tree Object 
-	BinarySearchTree<int>* root = NULL;
-	BinarySearchTree<int> b = NULL;
+	//// Binary Search Tree Object 
+	//BinarySearchTree<int>* root = NULL;
+	//BinarySearchTree<int> b = NULL;
 
-	root = b.append(root, NULL);
+	//root = b.append(root, NULL);
 
 	std::string myText;
-	long long count=1; 
+	//long long count=1; 
 
 	std::string file = "003_Data_Set_Zipcode_5_Digit_10kitems.txt";
 
-	// Binary Search Insertion
-	// Input Size: 100_000 
-	// Using STL std::chrono 
-	std::ifstream MyReadFile(file);
+	//// Binary Search Insertion
+	//// Input Size: 100_000 
+	//// Using STL std::chrono 
+	//std::ifstream MyReadFile(file);
 
-	auto start = high_resolution_clock::now();
-	
-	while (getline(MyReadFile, myText)) {
+	//auto start = high_resolution_clock::now();
+	//
+	//while (getline(MyReadFile, myText)) {
 
-		b.append(root, stoi(myText));
-	}
+	//	b.append(root, stoi(myText));
+	//}
 
-	auto stop = high_resolution_clock::now();
+	//auto stop = high_resolution_clock::now();
 
-	auto duration = duration_cast<milliseconds>(stop - start);
+	//auto duration = duration_cast<milliseconds>(stop - start);
 
-	std::ofstream myfile;
-	myfile.open("output_data.txt");
-	myfile << "Binary Search Tree Insertion \n";
-	myfile << "Time taken by function: " << duration.count() << " milliseconds \n";
-	myfile << "\n\n";
-	myfile.close();
-
-
-	MyReadFile.close();
+	//std::ofstream myfile;
+	//myfile.open("output_data.txt");
+	//myfile << "Binary Search Tree Insertion \n";
+	//myfile << "Time taken by function: " << duration.count() << " milliseconds \n";
+	//myfile << "\n\n";
+	//myfile.close();
 
 
+	//MyReadFile.close();
 
-	// Vector Object 
 
-	VectorT<int> myVec(9);
 
-	// Vector using Array Implementation Insertion
-	// Input Size: 100_000 
-	// Using STL std::chrono 
+	//// Vector Object 
+
+	VectorT<int> myVec;
+
+	//// Vector using Array Implementation Insertion
+	//// Input Size: 100_000 
+	//// Using STL std::chrono 
 	std::ifstream VectorInsert(file);
 
 	auto startOne = high_resolution_clock::now();
@@ -75,40 +75,42 @@ int main() {
 	myfileOne.open("output_data.txt", std::ios_base::app);
 	myfileOne << "Vector using Array Implementation Insertion Insertion \n";
 	myfileOne << "Time taken by function: " << durationOne.count() << " milliseconds \n";
-	myfile << "\n\n";
+	myfileOne << "\n\n";
 	myfileOne.close();
 
 	VectorInsert.close();
 
 
-	// Stack Object 
+	//// Stack Object 
 
-	Stack<int> myInt;
+	//Stack<int> myInt;
 
-	// Stack Using STL Queue Insertion
-	// Input Size: 100_000 
-	// Using STL std::chrono 
-	std::ifstream StackInsert(file);
+	//// Stack Using STL Queue Insertion
+	//// Input Size: 100_000 
+	//// Using STL std::chrono 
+	//std::ifstream StackInsert(file);
 
-	auto startTwo = high_resolution_clock::now();
+	//auto startTwo = high_resolution_clock::now();
 
-	while (getline(StackInsert, myText)) {
+	//while (getline(StackInsert, myText)) {
 
-		myInt.push(stoi(myText));
+	//	myInt.push(stoi(myText));
 
-	}
+	//}
 
-	auto stopTwo = high_resolution_clock::now();
+	//auto stopTwo = high_resolution_clock::now();
 
-	auto durationTwo = duration_cast<milliseconds>(stopTwo - startTwo);
+	//auto durationTwo = duration_cast<milliseconds>(stopTwo - startTwo);
 
-	StackInsert.close();
+	//StackInsert.close();
 
-	std::ofstream myfileTwo;
-	myfileTwo.open("output_data.txt", std::ios_base::app);
-	myfileTwo << "Stack Insertion \n";
-	myfileTwo << "Time taken by function: " << durationTwo.count() << " milliseconds \n";
-	myfile << "\n\n";
-	myfileTwo.close();
+	//std::ofstream myfileTwo;
+	//myfileTwo.open("output_data.txt", std::ios_base::app);
+	//myfileTwo << "Stack Insertion \n";
+	//myfileTwo << "Time taken by function: " << durationTwo.count() << " milliseconds \n";
+	//myfile << "\n\n";
+	//myfileTwo.close();
+
+
 
 }

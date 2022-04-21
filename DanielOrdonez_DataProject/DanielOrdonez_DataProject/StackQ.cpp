@@ -47,7 +47,6 @@ Stack<T>::~Stack() {
 }
 
 
-
 template<typename T>
 void Stack<T>::push(T data) {
 
@@ -65,6 +64,11 @@ void Stack<T>::push(T data) {
 	secondQ = emptyQ;
 
 }
+
+
+//First Q [5,4,7,8]
+//Second Q Top [5,4,7,8] Bottom 
+
 
 template<typename T>
 void Stack<T>::qpop() {
