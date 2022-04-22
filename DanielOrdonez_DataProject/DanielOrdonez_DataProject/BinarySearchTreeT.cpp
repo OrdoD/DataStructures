@@ -25,9 +25,11 @@ public:
 	BinarySearchTree(T);
 	~BinarySearchTree(); 
 	BinarySearchTree* append(BinarySearchTree*, T);
-	void search(BinarySearchTree* root, T target);
-	void Inorder(BinarySearchTree* root);
-
+	BinarySearchTree<T>* search(BinarySearchTree* root, T target);
+	BinarySearchTree<T>* minVal(BinarySearchTree* root);
+	BinarySearchTree<T>* remove(BinarySearchTree* root, T data);
+	void inorder(BinarySearchTree* root);
+	
 
 };
 
@@ -63,14 +65,76 @@ BinarySearchTree<T>::append(BinarySearchTree* root, T data) {
 
 
 template <typename T>
-void BinarySearchTree<T>::search(BinarySearchTree* root, T target) {
+BinarySearchTree<T>* BinarySearchTree<T>::search(BinarySearchTree* root, T target) {
 
-	if (root == NULL || root == target) { return root; }
+	if (root == NULL || root->data == target) { return root; }
 
-	if(root->data > target) {
-		
-		return search(root->right, target); 
+	if(root->data > target) { return search(root->left, target);}
+
+	return search(root->right, target);
+}
+
+
+template <typename T>
+BinarySearchTree<T>* BinarySearchTree<T>::minVal(BinarySearchTree* root) {
+
+	BinarySearchTree* curr = root; 
+
+	while (curr && curr->left != NULL) {
+		curr = curr->left; 
 	}
+	return curr; 
 
-	return search(root->left, target);
+}
+
+
+template <typename T>
+void BinarySearchTree<T>::inorder(BinarySearchTree* root) {
+
+	if (root == NULL) { return;  }
+
+	inorder(root->left);
+
+	std::cout << root->data << " "; 
+
+	inorder(root->right);
+}
+
+template <typename T>
+BinarySearchTree<T>* BinarySearchTree<T>::remove(BinarySearchTree* root, T data) {
+
+	if (root == NULL) { return root; } 
+
+	if (data > root->data) { root->right = remove(root->right, data); }
+
+	else if (data < root->data) { root->left = remove(root->left, data); }
+
+	else {
+
+		if (root->left == NULL &&
+			root->right == NULL) {
+			return NULL;
+		}
+
+		
+		if (root->left == NULL) {
+			BinarySearchTree* tree = root->right;
+			free(root); 
+			return tree;
+		}
+
+		if (root->right == NULL) {
+			BinarySearchTree* tree = root->left;
+			free(root);
+			return tree;
+		}
+
+		BinarySearchTree* bst = minVal(root->right);
+
+		root->data = bst->data; 
+
+		root->right = remove(root->right, bst->data); 
+	}
+	return root; 
+
 }

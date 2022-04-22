@@ -148,7 +148,11 @@
     <Text Include="001_Data_Set_Zipcode_5_Digit_100kitems.txt" />
     <Text Include="002_Data_Set_Buisiness_Names_50kitems.txt" />
     <Text Include="003_Data_Set_Zipcode_5_Digit_10kitems.txt" />
+    <Text Include="BusinessName50k.txt" />
+    <Text Include="BusinessNames100k.txt" />
+    <Text Include="BusinessNames10k.txt" />
     <Text Include="output_data.txt" />
+    <Text Include="test.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

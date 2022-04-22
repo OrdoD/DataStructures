@@ -41,5 +41,17 @@
     <Text Include="003_Data_Set_Zipcode_5_Digit_10kitems.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="test.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="BusinessName50k.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="BusinessNames10k.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="BusinessNames100k.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

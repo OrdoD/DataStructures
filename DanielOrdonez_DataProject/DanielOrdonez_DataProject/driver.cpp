@@ -12,27 +12,35 @@ using namespace std::chrono;
 int main() {
 
 
-	//// Binary Search Tree Object 
+	// Binary Search Tree Object 
 	//BinarySearchTree<int>* root = NULL;
 	//BinarySearchTree<int> b = NULL;
 
-	//root = b.append(root, NULL);
+	//root = b.append(root, 1004353);
 
 	std::string myText;
-	//long long count=1; 
+	std::string myTextt;
+	////long long count=1; 
 
-	std::string file = "003_Data_Set_Zipcode_5_Digit_10kitems.txt";
+	std::string file = "002_Data_Set_Buisiness_Names_50kitems.txt";
 
-	//// Binary Search Insertion
-	//// Input Size: 100_000 
-	//// Using STL std::chrono 
+	// Binary Search Insertion
+	// Input Size: 100_000 
+	// Using STL std::chrono 
+
 	//std::ifstream MyReadFile(file);
-
-	//auto start = high_resolution_clock::now();
-	//
+	//std::ifstream MyReadFilee(file);
 	//while (getline(MyReadFile, myText)) {
 
 	//	b.append(root, stoi(myText));
+	//}
+
+	//auto start = high_resolution_clock::now();
+
+	//while (getline(MyReadFilee, myTextt)) {
+
+	//	root = b.remove(root, stoi(myTextt));
+
 	//}
 
 	//auto stop = high_resolution_clock::now();
@@ -41,62 +49,71 @@ int main() {
 
 	//std::ofstream myfile;
 	//myfile.open("output_data.txt");
-	//myfile << "Binary Search Tree Insertion \n";
+	//myfile << "Binary Search Tree Deletion \n";
 	//myfile << "Time taken by function: " << duration.count() << " milliseconds \n";
 	//myfile << "\n\n";
 	//myfile.close();
 
-
+	//MyReadFilee.close();
 	//MyReadFile.close();
 
 
 
-	//// Vector Object 
+	// Vector Object 
 
-	VectorT<int> myVec;
+	//VectorT<int> myVec;
 
-	//// Vector using Array Implementation Insertion
-	//// Input Size: 100_000 
-	//// Using STL std::chrono 
-	std::ifstream VectorInsert(file);
+	// //Vector using Array Implementation Insertion
+	// //Input Size: 100_000 
+	// //Using STL std::chrono 
+	//std::ifstream VectorInsert(file);
 
-	auto startOne = high_resolution_clock::now();
+	//while (getline(VectorInsert, myText)) {
+	//	
+	//	myVec.insert(stoi(myText));
+	//}
 
-	while (getline(VectorInsert, myText)) {
+	//auto startOne = high_resolution_clock::now();
 
-		myVec.insert(stoi(myText));
-	}
+	//for (auto i = 0; i < 50001; i++) {
 
-	auto stopOne = high_resolution_clock::now();
+	//	myVec.remove();
+	//}
 
-	auto durationOne = duration_cast<milliseconds>(stopOne - startOne);
+	//auto stopOne = high_resolution_clock::now();
 
-	std::ofstream myfileOne;
-	myfileOne.open("output_data.txt", std::ios_base::app);
-	myfileOne << "Vector using Array Implementation Insertion Insertion \n";
-	myfileOne << "Time taken by function: " << durationOne.count() << " milliseconds \n";
-	myfileOne << "\n\n";
-	myfileOne.close();
+	//auto durationOne = duration_cast<milliseconds>(stopOne - startOne);
 
-	VectorInsert.close();
+	//std::ofstream myfileOne;
+	//myfileOne.open("output_data.txt", std::ios_base::app);
+	//myfileOne << "Vector using Array Implementation Deletion \n";
+	//myfileOne << "Time taken by function: " << durationOne.count() << " milliseconds \n";
+	//myfileOne << "\n\n";
+	//myfileOne.close();
+
+	//VectorInsert.close();
+
+
 
 
 	//// Stack Object 
 
 	//Stack<int> myInt;
 
-	//// Stack Using STL Queue Insertion
-	//// Input Size: 100_000 
-	//// Using STL std::chrono 
+	////// Stack Using STL Queue Insertion
+	////// Input Size: 100_000 
+	////// Using STL std::chrono 
 	//std::ifstream StackInsert(file);
-
-	//auto startTwo = high_resolution_clock::now();
 
 	//while (getline(StackInsert, myText)) {
 
 	//	myInt.push(stoi(myText));
 
 	//}
+
+	//auto startTwo = high_resolution_clock::now();
+
+	//myInt.stackSort();
 
 	//auto stopTwo = high_resolution_clock::now();
 
@@ -108,7 +125,7 @@ int main() {
 	//myfileTwo.open("output_data.txt", std::ios_base::app);
 	//myfileTwo << "Stack Insertion \n";
 	//myfileTwo << "Time taken by function: " << durationTwo.count() << " milliseconds \n";
-	//myfile << "\n\n";
+	//myfileTwo << "\n\n";
 	//myfileTwo.close();
 
 

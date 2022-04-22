@@ -20,12 +20,13 @@ class VectorT {
 public: 
 	T* arr;
 	VectorT(); 
-	void insert(T data); 
+	void insert(T); 
 	int currIndex;
 	size_t size;
 	void remove();
 	int getSize();
 	void printArr();
+	int vectorSearch(T);
 
 private: 
 	void resizeArr();
@@ -93,14 +94,13 @@ void VectorT<T>::printArr() {
 
 	for (auto i = 0; i < currIndex; i++) {
 		std::cout << "arr[" << arr[i] << "]" << "\n";
-		std::cout << size << "\n";
 	}
 }
 
 template <typename T> 
 void VectorT<T>::remove() {
+
 		if(currIndex == 0) { 
-			std::cout << "Vector is empty" << "\n";
 			return;
 		}
 		if (currIndex <= (size / 2) && (size != 10)) {
@@ -121,4 +121,20 @@ void VectorT<T>::remove() {
 
 	currIndex--;
 	arr[currIndex] = 0; 
+}
+
+
+
+template <typename T>
+int VectorT<T>::vectorSearch(T data) {
+
+	for (auto i = 0; i < currIndex; i++) {
+		std::cout << arr[i] << "\n";
+		if (arr[i] == data) {
+			std::cout << "Found " << arr[i]  << " at " << currIndex-1 <<  "\n";
+			return 1; 
+		}
+	}
+
+	return -1; 
 }

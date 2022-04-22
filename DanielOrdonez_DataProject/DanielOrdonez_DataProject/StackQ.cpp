@@ -22,8 +22,11 @@ public:
 	Stack();
 	~Stack();
 	T peek() ;
-	void push(T data);
+	void push(T);
 	void qpop();
+	int searchStack(T); 
+	void stackSort(); 
+	bool empty(); 
 	std::queue<T> firstQ, secondQ;
 	size_t size;
 
@@ -65,9 +68,12 @@ void Stack<T>::push(T data) {
 
 }
 
+template<typename T>
+bool Stack<T>::empty() {
 
-//First Q [5,4,7,8]
-//Second Q Top [5,4,7,8] Bottom 
+	return firstQ.empty(); 
+
+}
 
 
 template<typename T>
@@ -89,4 +95,51 @@ T Stack<T>::peek() {
 
 	return firstQ.front();
 
+}
+
+
+template<typename T> 
+int Stack<T>::searchStack(T data) {
+
+	while (!(firstQ.empty())) {
+		 
+		if (peek() == data) {
+			std::cout << "Found" << "\n"; 
+			return 1;
+		}
+
+		firstQ.pop(); 
+	} 
+
+	return -1; 
+}
+
+
+template<typename T>
+void Stack<T>::stackSort() {
+
+	Stack<T> stackTemp;
+	Stack<T> stack;
+
+	stack.firstQ = firstQ;
+
+	if (stack.empty()) { return; }
+
+	while (!(stack.empty())) {
+
+		T data = stack.peek(); 
+		stack.qpop();
+
+		while (!(stackTemp.empty())
+			&& stackTemp.peek() < data) {
+
+			stack.push(stackTemp.peek());
+			stackTemp.qpop();
+		}
+
+		stackTemp.push(data);
+
+	}
+
+	firstQ = stackTemp.firstQ; 
 }
