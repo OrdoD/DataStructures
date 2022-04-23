@@ -11,23 +11,25 @@
 //    myVec.insert(30);
 //	  myVec.insert(40); 
 //	  myVec.insert(50); 
-
+#define COUNT 10
 
 
 template <typename T>
 class BinarySearchTree {
-	T data;
-	BinarySearchTree* left; 
-	BinarySearchTree* right; 
+
 
 public: 
-
+	T data;
+	BinarySearchTree* left;
+	BinarySearchTree* right;
 	BinarySearchTree(T);
 	~BinarySearchTree(); 
 	BinarySearchTree* append(BinarySearchTree*, T);
 	BinarySearchTree<T>* search(BinarySearchTree* root, T target);
 	BinarySearchTree<T>* minVal(BinarySearchTree* root);
 	BinarySearchTree<T>* remove(BinarySearchTree* root, T data);
+	void print2DUtil(BinarySearchTree* root, int space);
+	void print2D(BinarySearchTree* root);
 	void inorder(BinarySearchTree* root);
 	
 
@@ -95,8 +97,6 @@ void BinarySearchTree<T>::inorder(BinarySearchTree* root) {
 
 	inorder(root->left);
 
-	std::cout << root->data << " "; 
-
 	inorder(root->right);
 }
 
@@ -137,4 +137,38 @@ BinarySearchTree<T>* BinarySearchTree<T>::remove(BinarySearchTree* root, T data)
 	}
 	return root; 
 
+}
+
+
+
+template <typename T> 
+void BinarySearchTree<T>::print2DUtil(BinarySearchTree* root, int space)
+{
+	// Base case
+	if (root == NULL)
+		return;
+
+	// Increase distance between levels
+	space += COUNT;
+
+	// Process right child first
+	print2DUtil(root->right, space);
+
+	// Print current node after space
+	// count
+	std::cout << std::endl;
+	for (int i = COUNT; i < space; i++)
+		std::cout << " ";
+	std::cout << root->data << "\n";
+
+	// Process left child
+	print2DUtil(root->left, space);
+}
+
+template <typename T>
+// Wrapper over print2DUtil()
+void BinarySearchTree<T>::print2D(BinarySearchTree* root)
+{
+	// Pass initial space count as 0
+	print2DUtil(root, 0);
 }

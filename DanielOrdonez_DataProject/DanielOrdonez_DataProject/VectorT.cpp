@@ -27,7 +27,9 @@ public:
 	int getSize();
 	void printArr();
 	int vectorSearch(T);
-
+	void qSortHelper(T arr[], int, int);
+	int partion(T arr[], int, int);
+	void qSort();
 private: 
 	void resizeArr();
 
@@ -93,7 +95,7 @@ template <typename T>
 void VectorT<T>::printArr() {
 
 	for (auto i = 0; i < currIndex; i++) {
-		std::cout << "arr[" << arr[i] << "]" << "\n";
+		std::cout << arr[i] << "\n";
 	}
 }
 
@@ -129,12 +131,52 @@ template <typename T>
 int VectorT<T>::vectorSearch(T data) {
 
 	for (auto i = 0; i < currIndex; i++) {
-		std::cout << arr[i] << "\n";
 		if (arr[i] == data) {
-			std::cout << "Found " << arr[i]  << " at " << currIndex-1 <<  "\n";
 			return 1; 
 		}
 	}
-
 	return -1; 
+}
+
+
+template <typename T>
+int VectorT<T>::partion(T arr[], int low, int high) {
+
+	auto p = high;
+	auto j = low;
+
+	for (auto i = low; i < high; i++) {
+
+		if (arr[i] < arr[p]) {
+
+			std::swap(arr[i], arr[j]);
+			j++;
+
+		}
+
+	}
+	std::swap(arr[j], arr[p]);
+	return j;
+
+}
+
+template <typename T>
+void VectorT<T>::qSortHelper(T arr[], int low, int high) {
+
+	if (low < high) {
+
+		int partionVal = partion(arr, low, high);
+
+		qSortHelper(arr, low, partionVal - 1);
+		qSortHelper(arr, partionVal + 1, high);
+
+	}
+
+}
+
+
+template <typename T>
+void VectorT<T>::qSort() {
+
+	qSortHelper(arr, 0, currIndex - 1);
 }

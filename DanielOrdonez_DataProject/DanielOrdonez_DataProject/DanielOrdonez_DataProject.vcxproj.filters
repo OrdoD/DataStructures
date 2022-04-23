@@ -53,5 +53,23 @@
     <Text Include="BusinessNames100k.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="SortedNames10k.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="SortedNames50k.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="SortedNames100k.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="DescedingOrder10k.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="DescedingOrder50k.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="DescedingOrder100k.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

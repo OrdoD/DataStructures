@@ -1,4 +1,4 @@
-Denmark Realty
+Austell Software
 Homerville Realty
 Tybee Island Textiles
 Thelma Landscaping
@@ -9898,86 +9898,85 @@ Doerun Travel
 Jasper Office supplies
 Peachtree City Website Bakery
 Jasper Industries
-Keller Motor Services
-Chula Textiles
-Hinesville Motor Services
-Lookout Mountain Studios
-Walthourville Office supplies
-Byromville Industries
-Daisy Landscaping
-Swainsboro Software
-Higgston Textiles
-Douglas Manufacturing
-Locust Grove Development
-Duluth Travel
-Pridgen Insurance
-Greenville Engineering
-Egypt Industries
-Fort Stewart Pro Services
-Stilson Insurance
-Jasper Engineering
-Lumpkin Development
-Allenhurst Cafe
-Mount Vernon Landscaping
-Montrose Accounting
-Chamblee Motors
-Dock Junction Motor Services
-Kingsland Motor Services
-Moultrie Industries
-Bowens Mill Furnishings
-Sylvester Signs
-Cuthbert Gymnasium
-Fayetteville Industries
-West Point Cafe
-Fort Stewart Motors
-Dalton Realty
-Waycross Software
-Thomaston Medical supplies
-Patterson Travel
-Dock Junction Industries
-Peachtree City Website Signs
-Ochlocknee Development
-Edith Landscaping
-Amboy Textiles
-Cumming Motor Services
-Nashville Gymnasium
-Dixie Software
-White Oak Development
-Bemiss Furnishings
-Cairo Realty
-Hoboken Development
-Nicholls Pro Services
-Byromville Furnishings
-Cedartown Signs
-Potter Office supplies
-Eldorado Software
-Cobbtown Services
-Lake City Landscaping
-Tifton Insurance
-Homeland Motors
-Ousley Signs
-Chester Bakery
-Royston Cafe
+Americus Industries
+Americus Industries
+Americus Industries
+Americus Industries
+Americus Industries
+Bowman Development
+Bowman Development
+Bowman Development
+Bowman Development
+Bowman Development
+Bowman Development
+Cogswell Tech
+Cogswell Tech
+Cogswell Tech
+Cogswell Tech
+Cogswell Tech
+Cumming Accounting
+Cumming Accounting
+Cumming Accounting
+Cumming Accounting
+Cumming Accounting
+Cumming Accounting
+Fargo Manufacturing
+Fargo Manufacturing
+Fargo Manufacturing
+Fargo Manufacturing
+Fargo Manufacturing
+Grooverville Development
+Grooverville Development
+Grooverville Development
+Grooverville Development
+Grooverville Development
+Grooverville Development
+Lax Furnishings
+Lax Furnishings
+Lax Furnishings
+Lax Furnishings
+Lax Furnishings
+Lax Furnishings
+Milton Development
+Milton Development
+Milton Development
+Milton Development
+Milton Development
+Peachtree City Website Furnishings
+Peachtree City Website Furnishings
+Peachtree City Website Furnishings
+Peachtree City Website Furnishings
+Peachtree City Website Furnishings
+Rebecca Travel
+Rebecca Travel
+Rebecca Travel
+Rebecca Travel
+Rebecca Travel
+Shellman Bluff Travel
+Shellman Bluff Travel
+Shellman Bluff Travel
+Shellman Bluff Travel
+Shellman Bluff Travel
+Shellman Bluff Travel
 Lake Park Furnishings
 Lincolnton Landscaping
 Villa Rica Motors
 Oxford Services
-Clayton Landscaping
-Newnan Development
+Wrightsville Zextiles
+Wrightsville Zextiles
 Hawkinsville Accounting
-Ailey Studios
-Shawnee Landscaping
+Wrightsville Zextiles
+Wrightsville Zextiles
 Albany Bakery
 Hortense Bakery
 Bemiss Travel
-Tifton Development
-Colesburg Bakery
+Wrightsville Zextiles
+Wrightsville Zextiles
 Register Cafe
 Athens Travel
 Parrott Textiles
 Braselton Motor Services
 Guyton Signs
-Lumpkin Bakery
 Dock Junction Motor Services
 Mershon Office supplies
 Tarboro Cafe
@@ -9986,7 +9985,6 @@ Stone Mountain Signs
 Collins Pro Services
 Odum Services
 Cuthbert Engineering
-Unionville Manufacturing
 Whigham Motor Services
 Vidalia Manufacturing
 Saint George Signs
@@ -9995,6 +9993,8 @@ Hamilton Motor Services
 Queensland Industries
 Dublin Motor Services
 Mount Zion Pro Services
-Barnesville Accounting
-Cordele Accounting
-Oxford Bakery
+Wrightsville Zextiles
+Wrightsville Zextiles
+Wrightsville Zextiles
+Zrightsville Zextiles
+Cogswell Tech

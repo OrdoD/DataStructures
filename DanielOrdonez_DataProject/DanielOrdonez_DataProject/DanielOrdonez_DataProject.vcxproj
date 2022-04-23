@@ -151,7 +151,13 @@
     <Text Include="BusinessName50k.txt" />
     <Text Include="BusinessNames100k.txt" />
     <Text Include="BusinessNames10k.txt" />
+    <Text Include="DescedingOrder100k.txt" />
+    <Text Include="DescedingOrder10k.txt" />
+    <Text Include="DescedingOrder50k.txt" />
     <Text Include="output_data.txt" />
+    <Text Include="SortedNames100k.txt" />
+    <Text Include="SortedNames10k.txt" />
+    <Text Include="SortedNames50k.txt" />
     <Text Include="test.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
